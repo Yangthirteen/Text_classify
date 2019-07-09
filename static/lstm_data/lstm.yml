@@ -1,0 +1,27 @@
+"backend: tensorflow\nclass_name: Sequential\nconfig:\n  layers:\n  - class_name:\
+  \ Embedding\n    config:\n      activity_regularizer: null\n      batch_input_shape:\
+  \ !!python/tuple\n      - null\n      - null\n      dtype: float32\n      embeddings_constraint:\
+  \ null\n      embeddings_initializer:\n        class_name: RandomUniform\n     \
+  \   config:\n          maxval: 0.05\n          minval: -0.05\n          seed: null\n\
+  \      embeddings_regularizer: null\n      input_dim: 20000\n      input_length:\
+  \ null\n      mask_zero: false\n      name: embedding_1\n      output_dim: 100\n\
+  \      trainable: true\n  - class_name: Conv1D\n    config:\n      activation: relu\n\
+  \      activity_regularizer: null\n      bias_constraint: null\n      bias_initializer:\n\
+  \        class_name: Zeros\n        config: {}\n      bias_regularizer: null\n \
+  \     data_format: channels_last\n      dilation_rate: !!python/tuple\n      - 1\n\
+  \      filters: 250\n      kernel_constraint: null\n      kernel_initializer:\n\
+  \        class_name: VarianceScaling\n        config:\n          distribution: uniform\n\
+  \          mode: fan_avg\n          scale: 1.0\n          seed: null\n      kernel_regularizer:\
+  \ null\n      kernel_size: !!python/tuple\n      - 3\n      name: conv1d_1\n   \
+  \   padding: valid\n      strides: !!python/tuple\n      - 1\n      trainable: true\n\
+  \      use_bias: true\n  - class_name: GlobalMaxPooling1D\n    config:\n      data_format:\
+  \ channels_last\n      name: global_max_pooling1d_1\n      trainable: true\n  -\
+  \ class_name: Dense\n    config:\n      activation: softmax\n      activity_regularizer:\
+  \ null\n      bias_constraint: null\n      bias_initializer:\n        class_name:\
+  \ Zeros\n        config: {}\n      bias_regularizer: null\n      kernel_constraint:\
+  \ null\n      kernel_initializer:\n        class_name: VarianceScaling\n       \
+  \ config:\n          distribution: uniform\n          mode: fan_avg\n          scale:\
+  \ 1.0\n          seed: null\n      kernel_regularizer: null\n      name: dense_1\n\
+  \      trainable: true\n      units: 10\n      use_bias: true\n  - class_name: Dropout\n\
+  \    config:\n      name: dropout_1\n      noise_shape: null\n      rate: 0.2\n\
+  \      seed: null\n      trainable: true\n  name: sequential_1\nkeras_version: 2.2.4\n"

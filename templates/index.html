@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>情感分析与文本分类</title>
+</head>
+<body>
+<h1 style="background-color: antiquewhite;color: black;">请输入要检测的句子</h1>
+<form action="/" method="post">
+    <input type="submit" name="submit"/>
+    <input type="text" name="sentence"/>
+</form>
+<h1 style="background-color: antiquewhite;color: black;">评价</h1>
+<table>
+    <tbody>
+    {% for foo in evaluate %}
+        <tr>
+        <td>{{ foo.value }}</td>
+        </tr>
+    {% endfor %}
+
+    <tr>
+    </tr>
+    </tbody>
+</table>
+<h1 style="background-color: antiquewhite;color: black;">文本分类结果</h1>
+<p>{{ category }}</p>
+<h1 style="background-color: antiquewhite;color: black;">情感分析结果</h1>
+<p>{{ classes }}</p>
+<h1 style="background-color: antiquewhite;color: black;">回复</h1>
+<p>{{ response }}</p>
+</body>
+</html>
